@@ -14,14 +14,14 @@ import frc.robot.Setup;
 import com.ctre.phoenix.sensors.CANCoder;
 import com.ctre.phoenix.sensors.CANCoderStatusFrame;
 
-public class Drivetrain {
+public class DrivetrainSubsystem {
            
         //get instance
-        private static Drivetrain instance;
+        private static DrivetrainSubsystem instance;
 
-        public static Drivetrain getInstance() {
+        public static DrivetrainSubsystem getInstance() {
                 if (instance == null) {
-                        instance = new Drivetrain();
+                        instance = new DrivetrainSubsystem();
                 }
                 return instance;
         }
@@ -44,7 +44,7 @@ public class Drivetrain {
         double speed = .15;
         String speedSetting = "medium";
 
-        public Drivetrain() {
+        public DrivetrainSubsystem() {
                 /*sets up the swerve modules for CANbus, sets a frame rate limit to prevent errors, establishes a center point for vector math, 
                 *gets encoder position, makes motor objects for rotation and translation, the compiles into one object.*/
                 CANCoder frontLeftCANCoder = new CANCoder(Setup.DrivetrainSubsystem_FRONT_LEFT_ANGLE_ENCODER);
