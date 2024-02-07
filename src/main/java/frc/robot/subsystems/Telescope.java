@@ -27,10 +27,10 @@ public class Telescope extends Subsystem {
         max = new DigitalInput(Setup.ArmMaxID);
     }
     public boolean AbletoExtend(){
-        return leftJoystickPos >= 0.3 && min.get();
+        return leftJoystickPos >= 0.3 && !min.get();
     }
     public boolean AbletoRetract(){
-        return leftJoystickPos <= -0.3 && max.get();
+        return leftJoystickPos <= -0.3 && !max.get();
     }
   
 
