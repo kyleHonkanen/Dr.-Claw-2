@@ -116,6 +116,9 @@ public class Setup {
   public double getSecondaryDriverLeftXAxis() {
     return secondaryJoystick.getRawAxis(0);
   }
+   public double getSecondaryDriverLeftYAxis() {
+    return secondaryJoystick.getRawAxis(1);
+  }
 
   public double getSecondaryDriverRightYAxis() {
     return secondaryJoystick.getRawAxis(5);
