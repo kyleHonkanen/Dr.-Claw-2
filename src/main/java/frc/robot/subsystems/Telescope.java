@@ -8,8 +8,8 @@ import frc.robot.Setup;
 
 public class Telescope extends Subsystem {
     CANSparkMax extendy;
-    public DigitalInput min;
-    public DigitalInput max;
+    private DigitalInput min;
+    private DigitalInput max;
     public double speed = 0.1;
     public double leftJoystickPos;
     
